@@ -28,7 +28,14 @@
 			"label": "Hello Remote World",
 			"onAutoForward": "notify"
 		}
+	},
+
+	"containerEnv": {
+		"DOPPLER_PROJECT": "mandalorian-gifs",
+		"DOPPLER_CONFIG": "dev",
+		"DOPPLER_TOKEN": "${localEnv:DOPPLER_TOKEN}" // Don't hard-code this!
 	}
+	
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"
